@@ -1,0 +1,351 @@
+@top-menu-bg-to: #eaf2f2;
+@top-menu-bg-between: #F6F6F6;
+@top-menu-bg-from: #fff;
+@top-menu-height: 55px;
+@top-menu-border: #d8d8d8;
+@top-menu-color: #3093f0;
+@top-menu-hover-bg: #faffff;
+@top-menu-hover-color: #737373;
+
+@font-family:"Segoe UI";
+
+@order-price-color: #565656;
+@order-number-color: #737373;
+
+@text-color: #565656;
+@link-color: #3093f0;
+
+@slider-border: rgba(214,214,214,1);
+@slider-title-color: #5e5e5e;
+@slider-text-color: #898998;
+@slider-link-color: #3093f0;
+
+@main-menu-from: rgba(63,183,253,1);
+@main-menu-between: rgba(63,183,253,1);
+@main-menu-to: rgba(4,122,195,1);
+@main-menu-text-color: #fff;
+@main-menu-border: rgba(214,214,214,1);
+
+@thing-old-color:red;
+@thing-new-color:black;
+@thing-new-bg:#f9ff48;
+
+@tabs-color:#66a700;
+@tabs-bg: #dddddd;
+@tabs-btn-bg: #7bba1f;
+@tabs-slider-hover: rgba(233,233,233,1);
+
+@main-title-color: #66a700;
+
+@footer-bg: lightgrey;
+
+.font-style(@color: @text-color, @size: 14px, @decoration: none) {
+    color: @color;
+    font-size: @size;
+    text-decoration: @decoration;
+}
+* {
+    font-family: @font-family;
+}
+
+.top{
+    position: relative;
+    width: 100%;
+    border-bottom: 1px solid @top-menu-border;
+    min-height: @top-menu-height;
+    background: @top-menu-bg-from;
+    background: -moz-linear-gradient(top, @top-menu-bg-from 0%, @top-menu-bg-between 47%, @top-menu-bg-to 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, @top-menu-bg-from), color-stop(47%, @top-menu-bg-between), color-stop(100%, @top-menu-bg-to));
+    background: -webkit-linear-gradient(top, @top-menu-bg-from 0%, @top-menu-bg-between 47%, @top-menu-bg-to 100%);
+    background: -o-linear-gradient(top, @top-menu-bg-from 0%, @top-menu-bg-between 47%, @top-menu-bg-to 100%);
+    background: -ms-linear-gradient(top, @top-menu-bg-from 0%, @top-menu-bg-between 47%, @top-menu-bg-to 100%);
+    background: linear-gradient(to bottom, @top-menu-bg-from 0%, @top-menu-bg-between 47%, @top-menu-bg-to 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=@top-menu-bg-from, endColorstr=@top-menu-bg-to, GradientType=0 );
+
+    .list {
+        padding: 15px 5px 0 10px;
+    }
+    .list a {
+        padding-right: 20px;
+        .font-style(@top-menu-color, 16px, underline);
+    }
+
+    .lang-button{
+        font-size: 14px;
+        padding: 10px 5px 0 40px;
+        .nav > li > a {
+            position: relative;
+            display: block;
+            padding: 5px 10px;
+        }
+        .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+            color: @top-menu-hover-color;
+            background-color: @top-menu-hover-bg;
+            border: 1px solid @top-menu-border ;
+        }
+    }
+
+    .login{
+        float: left;
+        .font-style(@top-menu-color, 16px, none);
+        padding: 15px 5px 0 40px;
+        a{
+            padding-right: 15px;
+            text-decoration: underline;
+        }
+    }
+}
+
+.search {
+    margin: 15px 0;
+    a {
+        float: left;
+        margin-right: 4%;
+    }
+    .phone-section{
+        margin-top: 8px;
+        .numbers{
+            .font-style();
+        }
+    }
+    .order-form {
+        margin-left: 5%;
+        .count {
+            .font-style(@order-number-color, 14px, none);
+            display: block;
+        }
+        .price {
+            .font-style(@order-price-color, 16px, none);
+            font-weight: bold;
+        }
+    }
+}
+
+.navbar-wrapper {
+    .navbar-default {
+        border-radius: 4px;
+        text-align: center;
+        background: rgba(63,183,253,1);
+        background: -moz-linear-gradient(top, @main-menu-from 0%, @main-menu-between 41%, @main-menu-to 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, @main-menu-from), color-stop(41%, @main-menu-between), color-stop(100%, @main-menu-to));
+        background: -webkit-linear-gradient(top, @main-menu-from 0%, @main-menu-between 41%, @main-menu-to 100%);
+        background: -o-linear-gradient(top, @main-menu-from 0%, @main-menu-between 41%, @main-menu-to 100%);
+        background: -ms-linear-gradient(top, @main-menu-from 0%, @main-menu-between 41%, @main-menu-to 100%);
+        background: linear-gradient(to bottom, @main-menu-from 0%, @main-menu-between 41%, @main-menu-to 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=@main-menu-from, endColorstr=@main-menu-to, GradientType=0 );
+
+        .navbar-nav > li > a {
+            color: @main-menu-text-color;
+            line-height: 15px;
+            padding: 10px 25px;
+            border-right: 1px solid @main-menu-border;
+
+            &.middle {
+                padding: 18px 25px;
+            }
+        }
+    }
+}
+
+.slider-section {
+    .thing{
+        .about{
+            .font-style(@link-color, 15px, underline);
+            cursor:pointer;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .old-price{
+            .font-style(@thing-old-color, 16px, line-through);
+        }
+        .new-price{
+            .font-style(@thing-new-color, 18px, none);
+            background: @thing-new-bg;
+            font-weight: 800;
+            padding: 3px;
+            border-radius: 3px;
+            margin-left: 14px;
+        }
+
+    }
+    .slider {
+        -webkit-box-shadow: 1px 6px 15px 0px @slider-border;
+        -moz-box-shadow: 1px 6px 15px 0px @slider-border;
+        box-shadow: 1px 6px 15px 0px @slider-border;
+        border-radius: 5px;
+        border: 1px solid @slider-border;
+
+        .carousel-caption img{
+            float:right;
+            height:230px;
+            margin:0 2% 0 1%
+        }
+        .carousel-caption h2{
+            margin-top: 0;
+            .font-style(@slider-title-color, 30px, none);
+            letter-spacing:1px
+        }
+        .carousel-caption a{
+            .font-style(@slider-link-color, 16px, underline);
+        }
+        .carousel-caption p{
+            .font-style(@slider-text-color, 16px, none);
+            letter-spacing:1px;
+            padding: 15px 0;
+            text-align:left;
+        }
+        #myCarousel{margin:20px 0}
+        .carousel-caption{
+            right:0;
+            left:0;
+            bottom:0;
+            top:0;
+            text-shadow: 0;
+            text-align: left;
+            text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+        }
+        .carousel-indicators{bottom:5px; text-align: right;}
+        .carousel .item{height:300px;}
+        .carousel-inner { padding: 0px 5px; background: #fff no-repeat; background-size: 360px auto; background-position: 85% 0; }
+        .carousel-inner>.item>img{position:absolute;top:0;left:0;min-width:100%;height:300px}
+        .carousel-indicators li{border:1px solid #808080}
+        .carousel-indicators .active{background-color:#808080}
+    }
+}
+
+.menu-tabs {
+    margin-top: 40px;
+    .nav-tabs > li > a{
+        margin-right: 2px;
+        line-height: 1.428571429;
+        border: 1px solid transparent;
+        border-radius: 4px 4px 0 0;
+        background: @tabs-bg;
+        .font-style(@text-color, 16px, none);
+    }
+    .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+        .font-style(@tabs-color, 17px, none);
+        font-weight: 700;
+    }
+    .section1 {
+        background: #ffffff;
+        padding-bottom: 30px;
+        width: 30%;
+    }
+
+    .section2{
+        float: left;
+    }
+
+    .section1 a {
+        width: 40%;
+        font-weight: 700;
+        margin-left: 7%;
+    }
+
+    .slider{
+        float: left;
+        width: 23%;
+        padding: 30px;
+        .price {
+            width: 100%;
+            text-align: left;
+            font-weight: 700;
+            font-size: 22px;
+            float: left;
+            display: block;
+            margin-bottom: 10px;
+        }
+        a .icon-foto {
+            width: 150px;
+            height: 200px;
+            margin-left: 7%;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        .about {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .btn-primary { font-weight: bold; }
+
+        .btn-primary:hover,
+        .btn-primary:focus,
+        .btn-primary:active,
+        .btn-primary.active {
+            color: #ffffff;
+            background-color: @tabs-btn-bg;
+            border-color: @tabs-btn-bg;
+        }
+
+        &:hover {
+            -webkit-box-shadow: 0px 0px 26px 2px @tabs-slider-hover;
+            -moz-box-shadow: 0px 0px 26px 2px @tabs-slider-hover;
+            box-shadow: 0px 0px 26px 2px @tabs-slider-hover;
+            border-radius: 5px;
+            border: @tabs-slider-hover;
+        }
+    }
+}
+
+.main-content {
+    .title-category {
+        color: @main-title-color;
+        letter-spacing: 1px;
+    }
+    .category {
+        .group {
+            text-decoration: underline;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            li a {
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+    }
+    .brands {
+        a {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+}
+
+.footer {
+    margin-top: 40px;
+    .link {
+        padding-bottom: 10px;
+        border-bottom: 1px solid gainsboro;
+        a {
+            text-decoration: underline;
+            cursor: pointer;
+            padding-right: 20px;
+        }
+    }
+    img{margin-top: 15%;}
+    .share-buttons a{
+        float: left;
+        margin: 0px 10px 20px 0px;
+        img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+}
+
+.develop-section {
+    padding: 20px 0;
+    background: @footer-bg;
+    .copyright {
+        float: left;
+    }
+    .develop {
+        float: right;
+    }
+}
+
+
